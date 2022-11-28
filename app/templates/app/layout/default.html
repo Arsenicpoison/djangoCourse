@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- start head -->
+
+<!-- Head -->
 {% include 'app/partials/head.html' %}
-<!-- End head -->
+<!-- End of Head -->
+
 <body id="page-top">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
 
         <!-- Sidebar -->
-       
-        {%  include 'app/partials/sidebar.html'%}
+        {% include 'app/partials/sidebar.html' %}
+
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -20,27 +22,26 @@
             <div id="content">
 
                 <!-- Topbar -->
-               
-                {% include 'app/partials/nav.html'%}
+                {% include 'app/partials/nav.html' %}
+
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
                 {% block content %}
-                {% endblock %}
+                {%endblock %}
                 <!-- /.container-fluid -->
 
             </div>
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            {% include 'app/partials/footer.html'%}
+            {% include 'app/partials/footer.html' %}
             <!-- End of Footer -->
 
         </div>
         <!-- End of Content Wrapper -->
 
     </div>
-   
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
@@ -67,7 +68,8 @@
             </div>
         </div>
     </div>
-{% load static %}
+
+    {% load static %}
     <!-- Bootstrap core JavaScript-->
     <script src="{% static 'app/vendor/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'app/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
@@ -84,8 +86,15 @@
     <!-- Page level custom scripts -->
     <script src="{% static 'app/js/demo/chart-area-demo.js' %}"></script>
     <script src="{% static 'app/js/demo/chart-pie-demo.js' %}"></script>
-    {% block script %}{% endblock %}
 
+    <!-- {% block scripts %}{% endblock %} -->
+    <!-- Page level plugins -->
+<script src="{% static 'app/vendor/datatables/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'app/vendor/datatables/dataTables.bootstrap4.min.js' %}"></script>
+
+<!-- Page level custom scripts -->
+<script src="{% static 'app/js/demo/datatables-demo.js' %}"></script>
+    {% comment %} {% block scripts %}{% endblock %} {% endcomment %}
 </body>
 
 </html>

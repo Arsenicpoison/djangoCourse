@@ -14,7 +14,7 @@
         </div>
         <div class="card-body">
                 <div class="container">
-                    <form action="{% url 'categories_store' %}" method="post">
+                    <form action="" method="post">
                         {% csrf_token %}
                         <div class="form-group">
                             {{ form.category_name|as_crispy_field }}

@@ -1,3 +1,4 @@
 from .home import *
 from .categories import *
-from app.forms import categoryForm
+from .home import *
+from .categories import *
