@@ -5,7 +5,7 @@ from app.models import Customer
 
 
 class Order(models.Model):
-    category= models.ForeignKey(Customer, on_delete=models.CASCADE)
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     product= models.ForeignKey(Product, on_delete=models.CASCADE)
     product_name = models.CharField(max_length=45)
     qty =models.FloatField()
