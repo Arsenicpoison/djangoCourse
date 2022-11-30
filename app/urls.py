@@ -16,7 +16,7 @@ Including another URLconf
 
 #from django.contrib import admin
 from django.urls import path
-from app.views import *
+from app.views import home,orders,categories,products,customers
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
@@ -39,5 +39,14 @@ urlpatterns = [
     path('customers/store',customers.store, name='customers_store'),
     path('customers/edit/<int:id>',customers.edit, name='customers_edit'),
     path('customers/delete/<int:id>',customers.delete, name='customers_delete'),
+    
+    
+    path('orders/',orders.index, name='orders_index'),
+    path('orders/add',orders.add, name='orders_add'),
+    path('orders/store',orders.store, name='orders_store'),
+    path('orders/edit/<int:id>',orders.edit, name='orders_edit'),
+    path('orders/delete/<int:id>',orders.delete, name='orders_delete'),
+    path('orders/getProducts',orders.getProducts, name='orders_getProducts'),
+    path('orders/getUnitPrice',orders.getUnitPrice, name='orders_getUnitPrice'),
     
 ]
