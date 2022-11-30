@@ -1,5 +1,4 @@
 from django.db import models
-from app.models import Category 
 from app.models import Product
 from app.models import Customer
 
